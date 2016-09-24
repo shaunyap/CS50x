@@ -1,0 +1,19 @@
+0.  JPEG, BMP can store up to 24 bits or approximately 16million colors. While PNGs typically store 24 bit images as well, it can potentailly store up to 48 bits or 256 teracolors. Gifs, on the other hand, can sample a palette of 256 colors from a 24bit color space.
+1.  The GIF format supports animation
+2.  Lossless compressions make files smaller without losing quality or data - enabling decompression to restore the original quality while lossy compressions permanently discard some data in order to reduce the file size. Typically lossy compressions try to only discard parts that are inperceptible to people, often resulting in a smaller file size than lossless compressions.
+3.  GIFs and JPEGs are lossy while BMPs and PNGs are lossless.
+4.  The first character in the file (which typically acts like a pointer in C) is changed to show that the file can be considreded 'deleted' and the space can be recycled. The clusters are then moved to the disk's free clusters.
+5.  By using a tool that overwrites the files multiple times - it is probably sufficient to prevent files from being recoverable by all but the top experts with specialized tools.
+6.  stdint.h is a header file in the standard C library that provides typedefs that specifies exact width integer types, as well as their minimum and maximum values for each type.
+7.  uint8_t, uint32_t, int32_t, and uint16_t specify integer types - the numbers in the names designate how many bits it contains, while the 'u' refers to an unsigned integer, i.e. that the integer is positive only while the types without 'u' refers to signed integers, which can be positive or negative. 
+8.  BYTE: 1 byte, DWORD: 4 bytes, LONG: 4 bytes WORD: 2 bytes
+9.  42 4D
+10. bfSize is the size of the file, while biSize is the size of the struct
+11. If biHeight is negative, it mens that the bitmap (the first byte) starts from the bottom-left corner and works upwards.
+12. biBitCount
+13. If there isn't enough space to write the file.
+14. It means that the program will read the file one block of the second argument at a time.
+15. To make sure that the padding addeed to the bmps are accounted for if the number of pixels in each 'scanline' is not a multiple of 4.
+16. fseek moves the pointer to a specfied position
+17. SEEK_CUR is the current location of the pointer
+18. Rick Astley :(
