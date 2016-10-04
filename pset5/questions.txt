@@ -1,0 +1,15 @@
+0.  an artificial long word said to mean a lung disease caused by inhaling very fine ash and sand dust.
+1.  Get Resource Usage - gets the resource usage measures for either that particular process or the processes of its children
+2.  16 - 2 structs annd 14 longs
+3.  To avoid scoping problems - getrusage stores the values by pointers (presumably to allocate memory dynamically), and so it would make more sense for caluclate to take on the struct pointers as arguments.
+4.  i)      First, the loop initializes c as the current character in the file, while it's not the end of the file, continue to the next step. 
+    ii)     The function then checks if the current character is an alphabet or an apostrophe as well as if it the current index is greater than 0. If it is, the character is appended to a word (which is an array of characters). 1 is added to the index.
+    iii)    Next, the function checks if the length of the word exceeds 46 (the length of the longest accepted word), if it is, it skips the current 'string', going through the rest of the characters until the next space, and drops the word.
+    iv)     It then also drops strings containing numbers - what remains is the word to be checked
+    v)      If the word is mispelled, what was typed is printed, and 1 is added to the number of misspelled words
+5.  Spaces are included in strings as well, so deliniating the words might cause problems.
+6.  Each time the functions are passed, a new constant is called - but this won't change as soon as the value is initialized.
+7.  Tries. Each node contains a boolean about whether the word is complete, as well as a pointer to potential further nodes, much like the Maxwell example.
+8.  much, much slower. Can't probably 30s+.
+9.  Loading is still the slowest process for me, but initially i had another variable tracking whether a particular node existed (I couldn't get the syntax right for checking if a node was NOT null) - removing that cleared some time. I had loops within loops in unload as well before I cleaned up the recursive funciton too.
+10. There is still 224 bytes leaking - way down from 800+kb, but I can't seem to find where it's gone wrong.
